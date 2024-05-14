@@ -10,6 +10,6 @@
   "author": "lquenti",
   "license": "MIT",
   "devDependencies": {
-    "web-ext": "^6.1.0"
+    "web-ext": "^7.11.0"
   }
 }
