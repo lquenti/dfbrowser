@@ -1,7 +1,11 @@
 const allowed_urls = [
   "stackoverflow.com",
   "wikipedia.org",
+  /* chat ai*/
   "chat-ai.academiccloud.de",
+  "gwdg.de",
+  "sso.academiccloud.de",
+
   "blog.fefe.de"
 ];
 
