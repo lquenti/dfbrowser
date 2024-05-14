@@ -1,27 +1,26 @@
+const allowed_urls = [
+  "stackoverflow.com",
+  "wikipedia.org",
+  "chat-ai.academiccloud.de",
+  "blog.fefe.de"
+];
+
+
 const rules = {
+  removeRuleIds: [1],
   addRules: [
     {
     id: 1,
     priority: 1,
     condition: {
-      "regexFilter": "^http://www.example.org(.*)",
-      "resourceTypes": ["main_frame"]
-    },
-    action: {
-      "type": "allow",
-    }
-    },
-    {
-    id: 2,
-    priority: 2,
-    condition: {
-      "regexFilter": "^https://www.google.com(.*)",
-      "resourceTypes": ["main_frame"]
+      "resourceTypes": ["main_frame"],
+      "excludedRequestDomains": allowed_urls.concat(["example.org"]),
+      "excludedInitiatorDomains": allowed_urls.concat(["example.org"])
     },
     action: {
       "type": "redirect",
       "redirect": {
-        "regexSubstitution": "http://www.example.org?url=\\0"
+        "url": "http://www.example.org"
       }
     }
   }
@@ -30,7 +29,7 @@ const rules = {
 
 chrome.declarativeNetRequest.updateDynamicRules(rules, () => {
   if (chrome.runtime.lastError) {
-    console.error(chrome.runtime.lastError);
+    console.error(JSON.stringify(chrome.runtime.lastError));
   } else {
     chrome.declarativeNetRequest.getDynamicRules(rules => console.log(rules));
   }
