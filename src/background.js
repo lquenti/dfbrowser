@@ -1,10 +1,22 @@
 const allowed_urls = [
+  /* generally useful */
   "stackoverflow.com",
   "wikipedia.org",
+  "github.com",
+
+
   /* chat ai*/
   "chat-ai.academiccloud.de",
   "gwdg.de",
-  "sso.academiccloud.de"
+  "sso.academiccloud.de",
+
+  /* competitive programming stuff */ 
+  "adventofcode.com",
+  "codeforces.com",
+  "leetcode.com",
+
+  /* other programming */
+  "cppreference.com"
 ];
 
 
