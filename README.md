@@ -1,0 +1,3 @@
+# This is for chromium only
+
+After using firefox for at least 12 years, I have to switch to chromium since firefox doesnt even let me sideload this...
