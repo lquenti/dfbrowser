@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "declarativeNetRequest-sample-dynamic",
+  "name": "dfbrowser",
   "version": "0.0.1",
   "permissions": [
     "declarativeNetRequest",
@@ -10,6 +10,13 @@
     "<all_urls>"
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "background.js",
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com",
+      "strict_min_version": "125.0"
+    }
   }
 }
