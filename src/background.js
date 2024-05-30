@@ -4,9 +4,7 @@ const allowed_urls = [
   /* chat ai*/
   "chat-ai.academiccloud.de",
   "gwdg.de",
-  "sso.academiccloud.de",
-
-  "blog.fefe.de"
+  "sso.academiccloud.de"
 ];
 
 
