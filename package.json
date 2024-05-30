@@ -5,7 +5,9 @@
   "description": "WIP",
   "main": "index.js",
   "scripts": {
-    "start": "web-ext run -s src --target chromium --start-url 'https://www.google.com'"
+    "start": "web-ext run -s src --target firefox-desktop --start-url 'https://www.google.com'",
+    "lint": "web-ext lint -s src",
+    "build": "web-ext build -s src"
   },
   "author": "lquenti",
   "license": "MIT",
